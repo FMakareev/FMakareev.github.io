@@ -1,0 +1,213 @@
+@font-face {
+    font-family: Beer money;
+    src: url(../fonts/beermoney-400-normal.woff2) format("woff2"), url(../fonts/beermoney-400-normal.woff) format("woff"), url(../fonts/beermoney-400-normal.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal
+}
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+html,
+body {
+    width: 100vw;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font: 16px 'Beer money';
+    text-align: center;
+    text-transform: uppercase;
+}
+h1 {
+    font-size: 60px;
+    margin: 30px 0;
+}
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.container {
+    width: calc(100vw - 160px);
+    margin: 0 auto;
+    text-align: center;
+}
+.container__accardion {
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    text-align: left;
+}
+#block_1,
+#block_2,
+#block_3 {
+    box-sizing: border-box;
+    width: 580px;
+    min-height: 60px;
+    position: relative;
+    margin-bottom: 10px;
+}
+.check {
+    display: none;
+}
+#block_1 label,
+#block_2 label,
+#block_3 label {
+    box-sizing: border-box;
+    width: 580px;
+    height: 60px;
+    display: block;
+    position: absolute;
+    color: #fff;
+    font-size: 1.4em;
+    cursor: pointer;
+    background-color: #3f444a;
+    transition-duration: 1s;
+    border: 1px solid #c4c4c4;
+    border-radius: 3px;
+}
+#block_1 label p,
+#block_2 label p,
+#block_3 label p {
+    margin: 0;
+    display: inline-block;
+    position: absolute;
+    left: 5%;
+    top: 30%
+}
+#block_1 .disable,
+#block_2 .disable,
+#block_3 .disable {
+    position: absolute;
+    right: 0%;
+    display: block;
+    border-left: 1px solid #c4c4c4;
+    width: 58px;
+    height: 59px;
+    background-image: url(../image/off_BG.png);
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+    opacity: 1;
+    transition-duration: 1s;
+}
+#block_1 .plus,
+#block_2 .plus,
+#block_3 .plus {
+    position: absolute;
+    top: 42.53%;
+    right: 43.38%;
+    opacity: 1;
+    transition-duration: 1s;
+    cursor: pointer;
+}
+#block_1 .active,
+#block_2 .active,
+#block_3 .active {
+    position: absolute;
+    right: 0%;
+    display: block;
+    border-left: 1px solid #c4c4c4;
+    width: 58px;
+    height: 59px;
+    background-image: url(../image/on_BG.png);
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition-duration: 1s;
+}
+#block_1 .minus,
+#block_2 .minus,
+#block_3 .minus {
+    position: absolute;
+    top: 49%;
+    right: 43.38%;
+    opacity: 1;
+    transition-duration: 1s;
+    cursor: pointer;
+    transform: rotate(90deg);
+}
+#block_1 .content,
+#block_2 .content,
+#block_3 .content {
+    box-sizing: border-box;
+    width: 580px;
+    transition-duration: 1s;
+    border: 1px solid #c4c4c4;
+    border-radius: 3px;
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    opacity: 0;
+    position: relative;
+    top: 59px;
+    padding: 15px
+}
+#block_1 .check:checked + label + .content {
+    visibility: visible;
+    overflow: visible;
+    height: 200px;
+    opacity: 1;
+    margin-bottom: 70px;
+}
+#block_1 .check:checked + label .plus {
+    transform: rotate(90deg);
+    opacity: 0;
+}
+#block_1 .check:checked + label .disable {
+    opacity: 0;
+}
+#block_1 .check:checked + label .active {
+    opacity: 1;
+}
+#block_1 .check:checked + label .minus {
+    opacity: 1;
+    transform: rotate(180deg);
+}
+#block_1 .check:checked + label {
+    background-color: #ec4848;
+}
+#block_2 .check:checked + label + .content {
+    visibility: visible;
+    overflow: visible;
+    height: 200px;
+    opacity: 1;
+    margin-bottom: 70px;
+}
+#block_2 .check:checked + label .plus {
+    transform: rotate(90deg);
+    opacity: 0;
+}
+#block_2 .check:checked + label .disable {
+    opacity: 0;
+}
+#block_2 .check:checked + label .active {
+    opacity: 1;
+}
+#block_2 .check:checked + label .minus {
+    opacity: 1;
+    transform: rotate(180deg);
+}
+#block_2 .check:checked + label {
+    background-color: #ec4848;
+}
+#block_3 .check:checked + label + .content {
+    visibility: visible;
+    overflow: visible;
+    height: 200px;
+    opacity: 1;
+    margin-bottom: 70px;
+}
+#block_3 .check:checked + label .plus {
+    transform: rotate(90deg);
+    opacity: 0;
+}
+#block_3 .check:checked + label .disable {
+    opacity: 0;
+}
+#block_3 .check:checked + label .active {
+    opacity: 1;
+}
+#block_3 .check:checked + label .minus {
+    opacity: 1;
+    transform: rotate(180deg);
+}
+#block_3 .check:checked + label {
+    background-color: #ec4848;
+}
