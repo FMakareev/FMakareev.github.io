@@ -1,0 +1,102 @@
+@font-face {
+    font-family: Beer money;
+    src: url(../fonts/beermoney-400-normal.woff2) format("woff2"), url(../fonts/beermoney-400-normal.woff) format("woff"), url(../fonts/beermoney-400-normal.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal
+}
+.sprite-social {
+    background: url(/image/sprite-social.svg) no-repeat 0 0;
+    width: 41px;
+    height: 42px;
+    display: block
+}
+.sprite-social.Twitter_icon {
+    background-position: 0 0
+}
+.sprite-social.Facebook_icon {
+    background-position: -51px 0
+}
+.sprite-social.vk_icon {
+    background-position: -102px 0
+}
+.sprite-social.Google_icon {
+    background-position: -153px 0
+}
+.contact__list-item_tel:before {
+    width: 26px;
+    height: 31px;
+    background-image: url(/image/footer_icon-tel.png)
+}
+.contact__list-item_email:before {
+    width: 26px;
+    height: 16px;
+    background-image: url(/image/footer_icon-email.png)
+}
+.contact__list-item_skype:before {
+    width: 26px;
+    height: 26px;
+    background-image: url(/image/footer_icon-skype.png)
+}
+.container:after,
+.container:before {
+    content: " ";
+    display: block;
+    clear: both
+}
+* {
+    box-sizing: border-box
+}
+body,
+html {
+    width: 100vw;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font: 24px Beer money;
+    text-align: center;
+    text-transform: uppercase;
+    background: #000;
+    overflow: hidden;
+}
+a {
+    text-decoration: none
+}
+p {
+    margin: 0
+}
+li {
+    list-style: none
+}
+ul {
+    padding: 0
+}
+h1,
+h2,
+h3,
+h4,
+ul {
+    margin: 0
+}
+h1 {
+    font-size: 60px;
+    writing-mode: vertical-lr;
+}
+.wrapper {
+    display: inline-block;
+    height: 100vh;
+    overflow: hidden;
+    position: relative
+}
+.container {
+    margin: 0 auto;
+    height: 100vh;
+}
+.header {
+    background: #fff;
+    padding: 30px;
+    float: left;
+}
+.main-ninjaBaner {
+    height: 100vh;
+    float: left;
+}
