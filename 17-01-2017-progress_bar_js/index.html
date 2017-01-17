@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Progress Bar JS</title>
+    <style>
+        @font-face {
+            font-family: Beer money;
+            src: url(../fonts/beermoney-400-normal.woff2) format("woff2"), url(../fonts/beermoney-400-normal.woff) format("woff"), url(../fonts/beermoney-400-normal.ttf) format("truetype");
+            font-weight: 400;
+            font-style: normal
+        }
+        
+        body,
+        html {
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            font: 24px Beer money;
+            text-align: center;
+            text-transform: uppercase
+        }
+        
+        .wrapper {
+            width: 100%;
+            min-height: 2000px;
+            overflow: hidden;
+            position: relative;
+            background-color: #CCCCCC;
+        }
+        
+        .container__progress {
+            width: 100vw;
+            position: fixed;
+            bottom: 0;
+        }
+        
+        #proggress {
+            width: 0%;
+            height: 4px;
+            background: red;
+        }
+        
+        .code {
+            text-align: left;
+            font-size: 16px;
+            text-transform: none;
+            display: inline-block;
+            box-shadow: 0px 0px 7px #6E6E6E;
+            background-color: #fff;
+            border: 2px solid #000;
+            padding: 15px;
+            border-radius: 10px;
+            font-family: "Arial", serif;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <h1>Progress Bar JS.</h1>
+            </div>
+            <div class="code">
+                <code>   
+                    var scroll = document.getElementById("proggress");   <br>     
+                    var scrollHeight = Math.max(<br>
+                        document.body.scrollHeight, document.documentElement.scrollHeight,<br>
+                        document.body.offsetHeight, document.documentElement.offsetHeight,<br>
+                        document.body.clientHeight, document.documentElement.clientHeight<br>
+                    );<br>
+                        <br>
+                    window.onscroll = function() {<br>
+                        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;<br>
+                        var a = scrollTop / (scrollHeight - window.innerHeight)<br>
+                        console.log(100 * a)<br>
+                        scroll.style.width = (100 * a) + "%"<br>
+                    } 
+                </code>
+            </div>
+        </header>
+    </div>
+    <div class="container__progress">
+        <div id="proggress"></div>
+    </div>
+
+    <script>
+        var scroll = document.getElementById("proggress");
+        // высота всей страницы
+        var scrollHeight = Math.max(
+            document.body.scrollHeight, document.documentElement.scrollHeight,
+            document.body.offsetHeight, document.documentElement.offsetHeight,
+            document.body.clientHeight, document.documentElement.clientHeight
+        );
+
+        window.onscroll = function() {
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            var a = scrollTop / (scrollHeight - window.innerHeight)
+            console.log(100 * a)
+            scroll.style.width = (100 * a) + "%"
+        }
+
+    </script>
+</body>
+
+</html>
