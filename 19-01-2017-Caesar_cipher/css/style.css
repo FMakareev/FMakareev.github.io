@@ -1,0 +1,79 @@
+@font-face {
+    font-family: "Beer money";
+    src: url(../fonts/beermoney-400-normal.woff2) format("woff2"), url(../fonts/beermoney-400-normal.woff) format("woff"), url(../fonts/beermoney-400-normal.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal
+}
+* {
+    box-sizing: border-box;
+}
+body,
+html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font: 30px "Beer money";
+    text-align: center;
+    text-transform: uppercase;
+    color: #000;
+    background-color: #6ca;
+}
+h1 {
+    margin: 0;
+}
+.header {
+    background-color: #fff;
+}
+.header .container {
+    padding: 40px 0;
+}
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.form_cipher {
+    background: #fff;
+    margin: 0 auto;
+    box-shadow: 0 0 10px #575757;
+    padding: 50px 60px;
+    width: 600px;
+    text-align: left;
+}
+.form_cipher input {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid #707070;
+    margin-bottom: 15px;
+    padding-left: 20px;
+}
+.form_cipher label {
+    display: block;
+    font: 18px "Beer money";
+    margin-bottom: 15px;
+}
+.form_cipher button {
+    width: 200px;
+    height: 40px;
+    background-color: #fff;
+    border: 3px solid black;
+    display: inline-block;
+    background: none;
+    color: #000;
+    font: 18px "Beer money";
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none;
+    transition: all .3s ease-in-out;
+    margin-bottom: 15px;
+}
+.form_cipher button:hover {
+    background-color: #000;
+    color: #fff;
+}
