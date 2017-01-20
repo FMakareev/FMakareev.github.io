@@ -30,7 +30,13 @@ function shuffle(arr) {
         return 0.5 - Math.random()
     });
 }
-
+console.log(localStorage.getItem('high'))
+function localStor(){
+    if(null == localStorage.getItem('highscore')){
+        localStorage.ыуеItem('highscore', 0);
+    }
+}
+localStor();
 // инициализация игрового поля
 function create() {
     // Наполнение игрового поля
@@ -44,7 +50,7 @@ function create() {
         elem.addEventListener("click", valid);
     }
 }
-
+// сброс игрового поля и всех счетчиков
 function clear() {
     if (gameBoard != null) {
         if (gameBoard.childNodes) {
@@ -96,13 +102,12 @@ function scoreTable() {
     }
     highScoreBlock.innerHTML = localStorage.getItem('highscore');
     finalScoreBlock.innerHTML = score;
-    finalTimeBlock.innerHTML = (sec + "." + mSec + "s");
+    finalTimeBlock.innerHTML = ("Time: " + sec + "." + mSec + "s");
     gamePageRestart.style.display = "block";
     clear();
 }
 // запуск игры
-btnStart.addEventListener("click", function () {
-        localStorage.setItem('highscore', 0);
+btnStart.addEventListener("click", function () {        
         shuffle(arr);
         create();
         gamePageStart.style.display = "none";
