@@ -96,7 +96,7 @@ function scoreTable() {
     }
     highScoreBlock.innerHTML = localStorage.getItem('highscore');
     finalScoreBlock.innerHTML = score;
-    finalTimeBlock.innerHTML = ("Time: " + sec + "." + mSec + "s");
+    finalTimeBlock.innerHTML = (sec + "." + mSec + "s");
     gamePageRestart.style.display = "block";
     clear();
 }
