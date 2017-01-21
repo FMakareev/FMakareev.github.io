@@ -3,7 +3,7 @@ var start = 1, // первая цифра
     score = 0, // счет
     mSec = 60, // кол-во милли секунд
     sec = 59, // кол-во секунд
-    highscore = 0,
+    highscore = 0, 
     lengthArr = 70; // кол-во ячеек
 // игровое поле
 var scoreBlock = document.getElementById("score_num"), // поле счета
@@ -20,25 +20,24 @@ var scoreBlock = document.getElementById("score_num"), // поле счета
 // пустой массив
 var arr = [];
 // инициализация массива
-function shuffle(arr) {
-    // наполнение массива
-    for (var i = 1; i <= lengthArr; i++) {
-        arr.push(i)
-    }
-    // перемешивание массива
-    return arr.sort(function () {
-        return 0.5 - Math.random()
-    });
-}
-console.log(localStorage.getItem('high'))
-function localStor(){
-    if(null == localStorage.getItem('highscore')){
-        localStorage.ыуеItem('highscore', 0);
+
+// проверка наличия локального хранилища
+function localStor() {
+    if (null == localStorage.getItem('highscore')) {
+        localStorage.setItem('highscore', 0);
     }
 }
 localStor();
 // инициализация игрового поля
 function create() {
+    // наполнение массива
+    for (var i = 1; i <= lengthArr; i++) {
+        arr.push(i)
+    }
+    // перемешивание массива
+    arr.sort(function () {
+        return 0.5 - Math.random()
+    });
     // Наполнение игрового поля
     for (var i = 0; i < lengthArr; i++) {
         // создаем элемент
@@ -95,27 +94,25 @@ var counterGame = function () {
 };
 // конец игры
 function scoreTable() {
-    clearTimeout(timout);    
+    clearTimeout(timout);
     highscore = localStorage.getItem('highscore');
     if (score > highscore) {
         localStorage.setItem('highscore', score);
     }
     highScoreBlock.innerHTML = localStorage.getItem('highscore');
     finalScoreBlock.innerHTML = score;
-    finalTimeBlock.innerHTML = ("Time: " + sec + "." + mSec + "s");
+    finalTimeBlock.innerHTML = (sec + "." + mSec + "s");
     gamePageRestart.style.display = "block";
     clear();
 }
 // запуск игры
-btnStart.addEventListener("click", function () {        
-        shuffle(arr);
-        create();
-        gamePageStart.style.display = "none";
-        counterGame();
-    })
-    // перезапуск игры
+btnStart.addEventListener("click", function () {
+    create();
+    gamePageStart.style.display = "none";
+    counterGame();
+})
+// перезапуск игры
 btnRestart.addEventListener("click", function () {
-    shuffle(arr);
     create();
     gamePageRestart.style.display = "none";
     counterGame();
