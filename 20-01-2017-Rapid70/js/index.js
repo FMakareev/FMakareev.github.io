@@ -38,6 +38,19 @@ function create() {
     arr.sort(function () {
         return 0.5 - Math.random()
     });
+<<<<<<< HEAD
+=======
+}
+console.log(localStorage.getItem('high'))
+function localStor(){
+    if(null == localStorage.getItem('highscore')){
+        localStorage.setItem('highscore', 0);
+    }
+}
+localStor();
+// инициализация игрового поля
+function create() {
+>>>>>>> b2b41336d68605094ec0077a4993667e98bf44a6
     // Наполнение игрового поля
     for (var i = 0; i < lengthArr; i++) {
         // создаем элемент
