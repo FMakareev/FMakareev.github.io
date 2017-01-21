@@ -33,7 +33,7 @@ function shuffle(arr) {
 console.log(localStorage.getItem('high'))
 function localStor(){
     if(null == localStorage.getItem('highscore')){
-        localStorage.ыуеItem('highscore', 0);
+        localStorage.setItem('highscore', 0);
     }
 }
 localStor();
