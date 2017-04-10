@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>space invaders</title>
+    <link href="style.css" rel="stylesheet">    
+</head>
+
+<body>
+    <div class="ui">
+        <div class="score__wrap"><span class="score__title">Score: </span><span id="score">0</span></div>
+        <div class="lives__wrap"><span class="lives__title">Lives: </span><span id="lives">3	</span></div>
+    </div>
+    <div id="canvas">
+        <!--#player-->
+    </div>
+    
+    <div id="stop" onclick="GameBord._Stop()">STOP</div>
+    <div class="active" id="menu__start">
+        <h1>space invaders</h1>
+        <ul>
+            <li><span class="ufo ufo__low"></span><span>= 10</span></li>
+            <li><span class="ufo ufo__middle"></span><span>= 20</span></li>
+            <li><span class="ufo ufo__strong"></span><span>= 40</span></li>
+        </ul>
+        <div id="start" onclick="GameBord._start()">Play Game</div>
+    </div>
+    <div id="menu__end">
+        <h1>space invaders</h1>
+        <h2>Game Over</h2>
+        <div class="score">Score = </div>
+        <div id="start" onclick="GameBord._start()">Play Game</div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
